@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+from sys import argv
+import knots
+
+# Intro text
+print('Kye\'s Number to Text Shifter (knots)')
+
+del argv[0]
+padding = len(max(argv, key=len))
+for arg in argv:
+	print('%s knots to: %s' % (arg.ljust(padding), knots.knot(int(arg))))
